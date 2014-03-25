@@ -1,49 +1,44 @@
 Issue ticketing system using Github
 ===================================
 
-Names
------
-* "Task tracker"
-* "Trackinator"
-
 Concepts/Scheme
 ---------------
-* Project
+* Project  
   Git module: `project-<id>`; id: SHA2 hash of name, date created and creator username;
-	
-    * Project metadata
-      File: `metadata`;
+
+    * Project metadata  
+      File: `metadata`;  
 	  Content: JSON object; Name, Dates, Creator;
 
-    * Scheme definition
-	  File: `scheme`;
+    * Scheme definition  
+	  File: `scheme`;  
       Content: JSON object; Issue types, fields;
-		
-        * Issue
-          Directory: `issue-<id>`; id: SHA2 hash of name, date created and creator username;
-	
-	    * Issue metadata
-  		  File: `metadata`;
-          Content: JSON object; Name, Dates, Creator;
 
-	    * Summary
-		  File: `summary`;
-		  Content: Markdown;
-		
-	    * Description
-	  	  File: `description`;
-		  Content: Markdown;
-		
-	    * Comment
-		  File: `comment-<id>`; id: SHA2 hash of comment, date created and creator username;
-		  Content: Markdown;
-		
-		    * Comment Metadata
-		      Commit comment;
-		      Content: JSON object; Date, comment creator, reason for edit (if edited)
-		
-		    * Attachments
-	          File: `attachment-<id>`; id: SHA2 hash of file contents;
+        * Issue  
+          Directory: `issue-<id>`; id: SHA2 hash of name, date created and creator username;  
+
+	    * Issue metadata  
+  		  File: `metadata`;  
+          Content: JSON object; Name, Dates, Creator;  
+
+	    * Summary  
+		  File: `summary`;  
+		  Content: Markdown;  
+
+	    * Description  
+	  	  File: `description`;  
+		  Content: Markdown;  
+
+	    * Comment  
+		  File: `comment-<id>`; id: SHA2 hash of comment, date created and creator username;  
+		  Content: Markdown;  
+
+		    * Comment Metadata  
+		      Commit comment;  
+		      Content: JSON object; Date, comment creator, reason for edit (if edited);
+
+		    * Attachments  
+	          File: `attachment-<id>`; id: SHA2 hash of file contents;  
               Content: Base64; DATA;
 
 Notes
