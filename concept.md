@@ -34,7 +34,7 @@ Concepts/Scheme
           Content: Markdown?;  
 
         * Attachments  
-          File: `attachment-<id>`; id: SHA2 hash of file contents;  
+          File: `attachment-<checksum>`; checksum: SHA2 hash of file contents;  
           Content: Base64; DATA;
 
 Notes
