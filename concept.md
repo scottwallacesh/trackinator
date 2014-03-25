@@ -65,5 +65,5 @@ Questions
 * How can we simply add a comment without changing the issue, metadata, etc.
   Can it be done in Git?  Arbitary modification a designated "scratch file"? "Experts only"?
 
-* How will we alidate files and content?
+* How will we validate files and content?
   Validation against the known types?
