@@ -4,22 +4,22 @@ Issue ticketing system using Github
 Concepts/Scheme
 ---------------
 * Project  
-  Git module: `project-<id>`; id: SHA2 hash of name, date created and creator username;
+  Git module: `project-<seq>`
 
     * Project metadata  
       File: `metadata`;  
-      Content: JSON object; Name, Dates, Creator;
+      Content: JSON object; Project name, dates, creator;
 
     * Scheme definition  
       File: `scheme`;  
       Content: JSON object; Issue types, fields;
 
     * Issue  
-      Directory: `issue-<id>`; id: SHA2 hash of name, date created and creator username;  
+      Directory: `issue-<seq>`
 
         * Issue metadata  
           File: `metadata`;  
-          Content: JSON object; Name, Dates, Creator;  
+          Content: JSON object; Issue key (seq. integer), date created, creator, due date, priority/severity;  
 
         * Summary  
           File: `summary`;  
@@ -30,16 +30,12 @@ Concepts/Scheme
           Content: Markdown;  
 
         * Comments  
-          File: `comment-<id>`; id: SHA2 hash of comment, date created and creator username;  
-          Content: Markdown;  
+          Git commit comment: 
+          Content: Markdown?;  
 
-            * Comment Metadata  
-              Commit comment;  
-              Content: JSON object; Date, comment creator, reason for edit (if edited);
-
-            * Attachments  
-              File: `attachment-<id>`; id: SHA2 hash of file contents;  
-              Content: Base64; DATA;
+        * Attachments  
+          File: `attachment-<id>`; id: SHA2 hash of file contents;  
+          Content: Base64; DATA;
 
 Notes
 -----
@@ -62,3 +58,12 @@ Questions
   Lucene? (is it better to store things as massive JSON objects? (apart from attachments))
   Is there a Git search thinger?
   Build our own?
+
+* How do we handle due date and priority?
+  Included in the issue metadata?
+
+* How can we simply add a comment without changing the issue, metadata, etc.
+  Can it be done in Git?  Arbitary modification a designated "scratch file"? "Experts only"?
+
+* How will we alidate files and content?
+  Validation against the known types?
