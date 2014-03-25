@@ -19,7 +19,7 @@ Concepts/Scheme
 
         * Issue metadata  
           File: `metadata`;  
-          Content: JSON object; date created, creator, due date, priority/severity, attachment metadata;
+          Content: JSON object; date created, creator, status, due date, priority/severity, attachment metadata;
 
         * Summary  
           File: `summary`;  
