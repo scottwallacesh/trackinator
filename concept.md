@@ -8,37 +8,37 @@ Concepts/Scheme
 
     * Project metadata  
       File: `metadata`;  
-	  Content: JSON object; Name, Dates, Creator;
+      Content: JSON object; Name, Dates, Creator;
 
     * Scheme definition  
-	  File: `scheme`;  
+      File: `scheme`;  
       Content: JSON object; Issue types, fields;
 
-        * Issue  
-          Directory: `issue-<id>`; id: SHA2 hash of name, date created and creator username;  
+    * Issue  
+      Directory: `issue-<id>`; id: SHA2 hash of name, date created and creator username;  
 
-	    * Issue metadata  
-  		  File: `metadata`;  
+        * Issue metadata  
+          File: `metadata`;  
           Content: JSON object; Name, Dates, Creator;  
 
-	    * Summary  
-		  File: `summary`;  
-		  Content: Markdown;  
+        * Summary  
+          File: `summary`;  
+          Content: Markdown;  
 
-	    * Description  
-	  	  File: `description`;  
-		  Content: Markdown;  
+        * Description  
+          File: `description`;  
+          Content: Markdown;  
 
-	    * Comment  
-		  File: `comment-<id>`; id: SHA2 hash of comment, date created and creator username;  
-		  Content: Markdown;  
+        * Comments  
+          File: `comment-<id>`; id: SHA2 hash of comment, date created and creator username;  
+          Content: Markdown;  
 
-		    * Comment Metadata  
-		      Commit comment;  
-		      Content: JSON object; Date, comment creator, reason for edit (if edited);
+            * Comment Metadata  
+              Commit comment;  
+              Content: JSON object; Date, comment creator, reason for edit (if edited);
 
-		    * Attachments  
-	          File: `attachment-<id>`; id: SHA2 hash of file contents;  
+            * Attachments  
+              File: `attachment-<id>`; id: SHA2 hash of file contents;  
               Content: Base64; DATA;
 
 Notes
