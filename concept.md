@@ -1,6 +1,11 @@
 Issue ticketing system using Github
 ===================================
 
+Google App Engine based issue tracking (aka ticketing) that utilises Git as a
+backing store.  The general concept is to make it close as possible to the 
+normal Git workflow and to utilise Markdown to ensure simplicity and 
+compatibility.
+
 Concepts/Scheme
 ---------------
 * Project  
@@ -19,7 +24,8 @@ Concepts/Scheme
 
         * Issue metadata  
           File: `metadata`;  
-          Content: JSON object; date created, creator, status, due date, priority/severity, attachment metadata;
+          Content: JSON object; date created, creator, status, due date, 
+                   priority/severity, attachment metadata;
 
         * Summary  
           File: `summary`;  
@@ -47,15 +53,18 @@ Questions
 ---------
 * How do we model form fields?
   JSON object; Array of: field name, field type
-  Is there a standard list of field types? plaintext, boolean, integer, float, blob, etc.
+  Is there a standard list of field types? plaintext, boolean, integer, float, 
+      blob, etc.
 
 * How do we handle ticket assignment?
-  Is ticket assignment even a thing? Simply commenting and including their name could trigger an email.
+  Is ticket assignment even a thing? Simply commenting and including their name
+      could trigger an email.
   How do you see which tickets you're currently working on?
   How does Github do it?
 
 * How do we handle search?
-  Lucene? (is it better to store things as massive JSON objects? (apart from attachments))
+  Lucene? (is it better to store things as massive JSON objects? (apart from 
+      attachments))
   Is there a Git search thinger?
   Build our own?
 
@@ -63,7 +72,8 @@ Questions
   Included in the issue metadata?
 
 * How can we simply add a comment without changing the issue, metadata, etc.
-  Can it be done in Git?  Arbitary modification a designated "scratch file"? "Experts only"?
+  Can it be done in Git?  Arbitary modification a designated "scratch file"? 
+      "Experts only"?
 
 * How will we validate files and content?
   Validation against the known types?
